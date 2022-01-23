@@ -1,0 +1,359 @@
+/* 一、顶部 */
+.header{
+    height: 660px;
+    background-image: linear-gradient(rgb(32, 20, 85),rgb(47, 37, 85),rgb(48, 41, 85),rgb(64, 59, 85));
+}
+/* 1、头像 */
+.box1{
+    height: 180px;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.box3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;  
+    letter-spacing: 5px;
+    font: 700 48px "楷体";
+    color:#fff;
+}
+.top img{
+    width: 160px;
+    border-radius: 50%;
+    border: 10px solid #000;
+}
+.top{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 200px;
+}
+/*2、 左菜单，右个人信息 */
+.top-info,.top-nav{
+    position: absolute;
+    top: -80%;
+    overflow: hidden;
+    z-index: 2;
+    width: 0;
+    height: 360px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.6);
+    transition: width 1s;
+}
+.top:hover .top-info,.top:hover .top-nav{
+    width: 320px;
+}
+.top-info{
+    right:-50%;
+    background-color: rgb(101, 101, 224);
+}
+.top-info ul{
+    padding-top: 20px;
+}
+.top-info ul li,.top-info ul li a{
+    padding:15px 0 15px 20px;
+    font-size: 20px;
+    color: cornsilk;
+}
+.top-info span{
+    font-family: 'icomoon';
+    color: lawngreen;
+}
+.top-info ul li a{
+    padding-left: 0;
+    padding-top: 0;
+}
+.top-nav{
+    left:-50%;
+    background-color: rgb(45, 88, 117);
+}
+.top-nav ul{
+    padding-top: 20px;
+}
+.top-nav ul li,.top-nav ul li a{
+    position: relative;
+    padding:10px 0 10px 30px;
+    font-size: 24px;
+    color: rgb(165, 194, 62);
+}
+.top-nav ul li span{
+    padding-left: 30px;
+    font: 38px 'icomoon';
+    color: rgb(168, 83, 83);
+}
+.header a{
+    display: block;
+    padding: 0 10px;
+}
+.top-nav ul li a::before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.header a:hover{
+    background-color: #fff;
+}
+/* 3、月出*/
+.yc{
+    position: relative;
+}
+/* (1)、山 */
+#shan1,#shan2{
+    transition: transform 1s;
+}
+#shan1::before,#shan2::before{
+    content: '';
+    position: absolute;
+    top: -150px;
+    z-index: 1;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 220px solid transparent;
+    border-right: 220px solid transparent;
+    border-top: 250px solid transparent;
+}
+#shan1::before{
+    left: -180px;
+    border-bottom:250px solid rgb(51, 36, 36) ;
+}
+#shan2::before{
+    right: 0;
+    border-bottom:250px solid rgb(61, 33, 33) ;
+}
+.top:active #shan1{
+    transform: translateX(330px);
+}
+.top:active #shan2{
+    transform: translateX(-330px);;
+} 
+/* (2)、月 */
+#yue::after{
+    content: '';
+    position: absolute;
+    top:100px;
+    left: -180px;
+    z-index: -1;
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0 0 5px 5px rgb(221, 211, 211);
+}
+#yue{
+    transition: transform 1s;
+}
+.top:active #yue{
+    transform: translateY(-190px);
+}
+/* (3)、地 */
+#ground::after{
+    content: '';
+    position: absolute;
+    top: 284px;
+    right: -750px;
+    z-index: 2;
+    display: block;
+    width: 1700px;
+    height: 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: rgb(80, 68, 58);
+    box-shadow:0 3px 2px 8px #000;
+}
+
+/* 二、导航栏 */
+.nav{
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    height: 60px;
+    background-color: goldenrod;
+    border-radius: 30px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+.nav ul li a{
+    padding: 10px 30px;
+    font-size: 32px;
+    color: snow;
+}
+.nav ul li a:hover{
+    border-bottom: 3px solid rgb(50, 75, 112);
+}
+/* 三、学科关系图 */
+.gxt{
+    height:660px;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 1000px;
+    margin-top: 30px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.heading h1{
+    margin-left: 100px;
+}
+.image{
+    background-image: url(../resources/image/gxt.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin-top: 20px;
+    height: 70vh;
+
+    width: 100vw;
+}
+
+/* 四、学习资源 */
+.resources{
+    width: 1600px;
+    height: 400px;
+}
+.web{
+    margin: 120px auto;
+    width: 1500px;
+}
+.web ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+.web ul li{
+    width: 300px;
+    height: 360px;
+    border-radius: 25px;
+    background-color:rgb(34, 124, 128);
+}
+/* 1、网站图片 */
+.img{
+    height: 200px;
+    background-size: cover;
+}
+.img:hover{
+    background-color: rgba(0,0,0, .5);
+}
+#img1{
+    background-image: url(../resources/image/bilibili.png);
+}
+#img2{
+    background-image: url(../resources/image/mooc.png);
+}
+#img3{
+    background-image: url(../resources/image/w3school.png);
+}
+#img4{
+    background-image: url(../resources/image/runoob.png);
+}
+/* 2、网站介绍 */
+.hd{
+    width: 200px;
+    height: 48px;
+    margin:25px 0 0 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(47, 47, 156);
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: seashell;
+}
+#hd1::after{
+    content: 'BILIBILI';
+}
+#hd2::after{
+    content: '中国大学MOOC';
+}
+#hd3::after{
+    content: 'W3SCHOOL';
+}
+#hd4::after{
+    content: '菜鸟教程';
+}
+.des{
+    width: 250px;
+    margin: 20px 0 0 30px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: yellow;
+}
+.des span{
+    float: right;
+    font-family: 'icomoon';
+    color: yellowgreen;
+    font-size: 25px;
+}
+.des span:hover{
+    font-size: 40px;
+}
+#des1::after{
+    content: '好的大学没有围墙';
+}
+#des2::after{
+    content: '各大高校海量课程';
+}
+#des3::after{
+    content: '从入门到入坟';
+}
+#des4::after{
+    content: '学的不只是，还有梦想';
+}
+
+/* 五、底部 */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border-top: 5px dotted rgb(56, 121, 165);
+}
+.bottom ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 150px;
+}
+.footer p{
+    margin-left: 250px;
+    font-size: 45px;
+    letter-spacing: 30px;
+    color: #fff;
+}
+.bottom ul li span{
+    font-family: 'icomoon';
+    padding-left: 35px;
+    border-left: 3px solid rgb(35, 77, 133);
+}
+.bottom ul li a{
+    font-size: 25px;
+    letter-spacing: 10px;
+    color: #fff;
+}
+.star:visited #star{
+    color:gold;
+}
+.up:hover #up{
+    color: gold;
+}

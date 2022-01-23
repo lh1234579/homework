@@ -1,0 +1,51 @@
+/* 导航栏 */
+.nav{
+    
+    height: 60px;
+    background-color: goldenrod;
+    border-radius: 30px;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+.aaa,.bbb a{
+    padding: 10px 30px;
+    font-size: 32px;
+    color: snow;
+}
+.aaa{
+    border-bottom: 3px solid rgb(50, 75, 112);
+}
+.bbb:hover .aaa,.nav:hover .aaa,.bbb:hover .aaa{
+    border-bottom: 0;
+}
+#b1:hover,#b2:hover,#b3:hover{
+    border-bottom: 3px solid rgb(50, 75, 112);
+}
+
+/* 网站导航 */
+.web{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.web ul {
+    width: 800px;
+    background: #3399ff;
+    padding: 20px;
+}
+.web ul li {
+    background: #cce5ff;
+    margin: 15px;
+    padding: 5px 0;
+}
+.web ul li a{
+    font-size: 20px;
+    color: #ff9999;
+}
+.web ul li:hover{
+    background-color: #3399ff;
+}

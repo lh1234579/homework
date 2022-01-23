@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    margin: 0 auto;
+    background-color: skyblue;
+    background-image: linear-gradient(skyblue,pink);
+    font-family:'YouYuan';
+}
